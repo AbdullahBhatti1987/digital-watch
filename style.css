@@ -1,0 +1,90 @@
+:root{
+    --background: #2E2F44;
+    --gradient: linear-gradient(to right, salmon, skyblue)
+}
+
+.gradient-text {
+    background-image: linear-gradient(to right, yellow, salmon);
+    background-clip: text;
+    color: transparent;
+  }
+
+body{
+    background-color: var(--background);
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-image: url(./images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+header{
+    height: 100px;
+}
+header h1{
+    text-shadow: 0px 0px 5px salmon;
+    color: white;
+
+}
+
+div.clock{
+    background-color: var(--background);
+    height: 300px!important;
+    width: 500px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 50px skyblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    
+}
+div.clock div.time{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+div.clock div.time div.hour, div.minute{
+    height: 70%;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+}
+div.clock div.colan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+div.clock div.time h1{
+    font-size: 150px;
+}
+div.clock div.time div.ampm{
+    height: 70%;
+    width: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+div.clock div.date{
+    width: 80%;
+}
+div.clock div.date p{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: skyblue;
+    
+}
+
+div.time #second{
+    font-size: 40px;
+}
