@@ -29,10 +29,17 @@ year.innerText = now.getFullYear();
 
 
 if(parseInt(hour.innerText) >= 13){
-    console.log('abc')
-    console.log(typeof parseInt(hour.innerText))
+    if(hour.innerText >= 12){
+        ampm.innerText = 'PM';
+        ampm.style.color = 'skyblue';
+    } else {
+        ampm.innerText = 'AM';
+    }
+    
+    
     var tweleHours = (parseInt(hour.innerText) - 12)
     hour.innerText = tweleHours;
+    
 }
 
 
@@ -45,10 +52,5 @@ if(minute.innerText.length == 1){
 if(second.innerText.length == 1){ 
     second.innerText = 0 + second.innerText;
 }
-if(hour.innerText >= 12){
-    ampm.innerText = 'PM';
-} else {
-    ampm.innerText = 'AM';
-    ampm.style.color = 'skyblue';
-}
+
 }, 1000)
