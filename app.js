@@ -12,8 +12,12 @@ var daysName = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'
 var monthsName = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 
+
+
+
 setInterval(function(){
 var now = new Date();
+hour.innerText = now.getHours();
 hour.innerText = now.getHours();
 minute.innerText = now.getMinutes();
 second.innerText = now.getSeconds();
@@ -22,20 +26,29 @@ day.innerText = daysName[now.getDay()];
 date.innerText = now.getDate();
 year.innerText = now.getFullYear();
 
+
+
+if(parseInt(hour.innerText) >= 13){
+    console.log('abc')
+    console.log(typeof parseInt(hour.innerText))
+    var tweleHours = (parseInt(hour.innerText) - 12)
+    hour.innerText = tweleHours;
+}
+
+
+if(hour.innerText.length == 1){ 
+    hour.innerText = 0 + hour.innerText;    
+}
+if(minute.innerText.length == 1){ 
+    minute.innerText = 0 + minute.innerText;
+}
+if(second.innerText.length == 1){ 
+    second.innerText = 0 + second.innerText;
+}
 if(hour.innerText >= 12){
-ampm.innerText = 'PM';
+    ampm.innerText = 'PM';
 } else {
     ampm.innerText = 'AM';
     ampm.style.color = 'skyblue';
-}
-
-if(hour.innerText.length == 1){ // Hours kay number ko 2 digits me apply karne kay liye if condition use ki hai
-    hour.innerText = 0 + hour.innerText;
-}
-if(minute.innerText.length == 1){ // Minutes kay number ko 2 digits me apply karne kay liye if condition use ki hai
-    minute.innerText = 0 + minute.innerText;
-}
-if(second.innerText.length == 1){ // Seconds kay number ko 2 digits me apply karne kay liye if condition use ki hai
-    second.innerText = 0 + second.innerText;
 }
 }, 1000)
