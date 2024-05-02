@@ -35,4 +35,7 @@ if(hour.innerText.length == 1){ // Hours kay number ko 2 digits me apply karne k
 if(minute.innerText.length == 1){ // Minutes kay number ko 2 digits me apply karne kay liye if condition use ki hai
     minute.innerText = 0 + minute.innerText;
 }
+if(second.innerText.length == 1){ // Seconds kay number ko 2 digits me apply karne kay liye if condition use ki hai
+    second.innerText = 0 + second.innerText;
+}
 }, 1000)
